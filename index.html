@@ -1,4 +1,4 @@
-<<html lang="en">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,7 +14,7 @@
   </body>
 
   <script>
-    fetch("https://day16backendnodejs.onrender.com")
+    fetch("https://day16backendnodejs.onrender.com/quote")
       .then((res) => res.json())
       .then((data) => {
         for (let i = 0; i < data.length; i++) {
@@ -27,7 +27,7 @@
       });
 
     function deleteQuote(id) {
-      fetch(`https://day16backendnodejs.onrender.com${id}`, {
+      fetch(`https://day16backendnodejs.onrender.com/quote${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())
